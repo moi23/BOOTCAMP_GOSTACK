@@ -1,0 +1,19 @@
+COMMANDS:
+
+//criar container postgres
+docker run --name gostack_postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+
+//listar todos os containers
+docker ps -a
+
+//iniciar container
+docker start hash_id
+
+//rodar as migrations
+yarn typeorm migration:run
+
+//apagar todas migrations
+yarn typeorm migration:revert
+
+//listar as migrations que já foram executadas
+yarn typeorm migration:show
